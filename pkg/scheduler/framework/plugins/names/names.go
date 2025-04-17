@@ -36,5 +36,5 @@ const (
 	VolumeBinding                   = "VolumeBinding"
 	VolumeRestrictions              = "VolumeRestrictions"
 	VolumeZone                      = "VolumeZone"
-	MyPlugin                        = "Myplugin"
+	MyPlugin                        = "MyPlugin"
 )

@@ -50,7 +50,7 @@ func TestMypluginNewFramework(t *testing.T) {
 			}
 			fwk, err := NewFramework(ctx, reg, &config.KubeSchedulerProfile{Plugins: tc.plugins})
 			if err != nil {
-				t.Fatal("Unexpected error")
+				t.Fatalf("Unexpected error: %v", err)
 			}
 			defer fwk.Close()
 			if err != nil {

@@ -332,6 +332,9 @@ func NewFramework(ctx context.Context, r Registry, profile *config.KubeScheduler
 	for name, factory := range r {
 		// initialize only needed plugins.
 		if !pg.Has(name) {
+			if name == "MyPlugin" {
+				return nil, fmt.Errorf("pg didn't got MyPlugin")
+			}
 			continue
 		}
 
